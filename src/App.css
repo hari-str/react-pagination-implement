@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+.container {
+  display: flex;
+  height: 100vh;
+  column-gap: 2rem;
+  background-color: #f5f5f5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* sidebar */
+.sidemenu_container {
+  flex: 0.2;
+  background-color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidemenu_container > h1 {
+  padding: 1rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidemenu {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 90vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.sidemenu_list {
+  width: 100%;
+  text-align: center;
+  list-style-type: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidemenu_list li {
+  font-size: 18px;
+  padding: 0.3rem;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #313131;
+  position: relative;
+}
+
+.sidemenu_list li:hover {
+  color: #3900d4;
+  background-color: #f0f0f0;
+}
+
+.sidemenu_icon {
+  position: absolute;
+  left: 20px;
+}
+
+/* Home */
+.homeComponent {
+  flex: 0.8;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.input_search > input {
+  width: 50%;
+  margin: 1rem 0;
+  padding: 0.4rem;
+  font-size: 18px;
+}
+
+table {
+  width: 100%;
+}
+table,
+th,
+td {
+  border: 1px solid lightgray;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+/* loading */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+/* pagination */
+.pagination-container {
+  margin-top: 1rem;
+}
+.pagination {
+  display: flex;
+  list-style-type: none;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.page-number {
+  padding: 5px 10px;
+  background-color: #fafafa;
+  color: #3900d4;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.page-number.active {
+  background-color: #3900d4;
+  color: #fff;
+}
+.page-number:hover {
+  background-color: #3900d4;
+  color: #fff;
 }
