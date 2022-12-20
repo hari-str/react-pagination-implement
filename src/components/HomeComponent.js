@@ -9,7 +9,7 @@ const HomeComponent = () => {
   const [search_input, setSearch_input] = useState("");
   const [search_data, setSearch_data] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [dataPerPage, setDataPerPage] = useState(15);
+  const [itemPerPage, setItemPerPage] = useState(13);
 
   // get the data
   const getFetchData = async () => {
@@ -32,8 +32,8 @@ const HomeComponent = () => {
   };
 
   // get currentpost
-  const indexOfLastItem = currentPage * dataPerPage;
-  const indexOfFirstItem = indexOfLastItem - dataPerPage;
+  const indexOfLastItem = currentPage * itemPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemPerPage;
   const currentItem = data.slice(indexOfFirstItem, indexOfLastItem);
 
   // hooks
@@ -45,9 +45,8 @@ const HomeComponent = () => {
   }, [search_input]);
 
   // change page
-  const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <div className="homeComponent">
       <h1>University Details</h1>
@@ -103,9 +102,11 @@ const HomeComponent = () => {
           </table>
 
           <Paginate
-            postsPerPage={dataPerPage}
-            totalPosts={data.length}
+            itemPerPage={itemPerPage}
+            totalItems={data.length}
             paginate={paginate}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
           />
         </>
       )}
