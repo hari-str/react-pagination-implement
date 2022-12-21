@@ -10,13 +10,13 @@ const SideMenu = () => {
             <span className="sidemenu_icon">
               <i className="fa-solid fa-building-columns"></i>
             </span>
-            University
+            <h4 className="sidemenu_title"> University</h4>
           </li>
           <li>
             <span className="sidemenu_icon">
               <i className="fa-solid fa-user-pen"></i>
             </span>
-            Admisstion
+            <h4 className="sidemenu_title">Admisstion</h4>
           </li>
         </ul>
       </div>

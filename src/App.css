@@ -30,15 +30,13 @@
 }
 
 .sidemenu_list li {
-  font-size: 18px;
-  font-weight: 600;
+  display: flex;
   padding: 0.3rem;
   border-radius: 5px;
   margin-bottom: 10px;
   cursor: pointer;
   transition: 0.3s;
   color: #313131;
-  position: relative;
 }
 
 .sidemenu_list li:hover {
@@ -46,9 +44,14 @@
   background-color: #f0f0f0;
 }
 
+.sidemenu_title {
+  font-size: 18px;
+  font-weight: 600;
+  flex: 0.8;
+}
+
 .sidemenu_icon {
-  position: absolute;
-  left: 20px;
+  flex: 0.2;
 }
 
 /* Home */
