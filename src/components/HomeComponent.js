@@ -13,18 +13,14 @@ const HomeComponent = () => {
 
   // get the data
   const getFetchData = async () => {
-    try {
-      setLoading(true);
-      const response = await fetch(
-        "http://universities.hipolabs.com/search?country=India"
-      );
-      const data = await response.json();
-      setData(data);
-      setSearch_data(data);
-      setLoading(false);
-    } catch (err) {
-      console.log(err);
-    }
+    setLoading(true);
+    const response = await fetch(
+      "http://universities.hipolabs.com/search?country=India"
+    );
+    const data = await response.json();
+    setData(data);
+    setSearch_data(data);
+    setLoading(false);
   };
 
   // filter the data
