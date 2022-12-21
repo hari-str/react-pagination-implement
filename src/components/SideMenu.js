@@ -16,7 +16,7 @@ const SideMenu = () => {
             <span className="sidemenu_icon">
               <i className="fa-solid fa-user-pen"></i>
             </span>
-            <h4 className="sidemenu_title">Admisstion</h4>
+            <h4 className="sidemenu_title">Admission</h4>
           </li>
         </ul>
       </div>
