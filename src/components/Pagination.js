@@ -65,6 +65,7 @@ const Paginate = ({
             );
           }
         })}
+
         <li>
           <button
             className="next-btn"

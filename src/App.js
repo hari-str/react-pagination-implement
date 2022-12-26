@@ -1,5 +1,5 @@
 import React from "react";
-import HomeComponent from "./components/HomeComponent";
+import Table from "./components/Table";
 import SideMenu from "./components/SideMenu";
 import "./App.css";
 
@@ -10,8 +10,8 @@ const App = () => {
         <div className="container">
           {/* sidemenu */}
           <SideMenu />
-          {/* Homecomponent */}
-          <HomeComponent />
+          {/* Home */}
+          <Table />
         </div>
       </section>
     </>
