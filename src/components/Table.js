@@ -60,6 +60,7 @@ const Table = () => {
       ) : (
         <>
           <div className="input_search">
+            <i class="fa-solid fa-magnifying-glass glass-icon"></i>
             <input
               type="search"
               placeholder="Search University"
