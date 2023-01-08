@@ -81,11 +81,7 @@ const Table = () => {
               </tr>
             </thead>
             <tbody>
-              {tableData.length === 0 ? (
-                <tr align="center">
-                  <td colSpan={4}>No Data Found</td>
-                </tr>
-              ) : (
+              {tableData.length !== 0 ? (
                 tableData.map((item, index) => {
                   return (
                     <tr key={index}>
@@ -104,17 +100,23 @@ const Table = () => {
                     </tr>
                   );
                 })
+              ) : (
+                <tr align="center">
+                  <td colSpan={4}>No Data Found</td>
+                </tr>
               )}
             </tbody>
           </table>
 
-          <Paginate
-            itemPerPage={itemsPerPage}
-            totalItems={totalItems}
-            paginate={paginate}
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-          />
+          {tableData.length !== 0 && (
+            <Paginate
+              itemPerPage={itemsPerPage}
+              totalItems={totalItems}
+              paginate={paginate}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+            />
+          )}
         </>
       )}
     </div>
